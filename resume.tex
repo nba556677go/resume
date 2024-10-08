@@ -42,14 +42,18 @@
 \def\role{ML System researcher} % JOB TITLE
 
 \input{_header}
+% Apply the first page style
+
 \begin{document}
+\thispagestyle{firstpage}
 \section{Education}
 \input{sections/education}
 
 %\input{sections/objective}
 
-\section{Skills}
-\input{sections/skills}
+\section{Selected publications}
+\input{sections/publications}
+
 
 \section{Professional Experience}
 \input{sections/experience}
@@ -60,7 +64,13 @@
 
 \section{Selected projects}
 \input{sections/activities}
-\section{Selected publications}
-\input{sections/publications}
+
+\section{Skills}
+\input{sections/skills}
+\newpage
+\thispagestyle{otherpages}
+
+\section{Honors and Awards}
+\input{sections/awards}
 
 \end{document}

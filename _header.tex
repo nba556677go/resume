@@ -3,27 +3,28 @@
 %====================
 
 \RequirePackage{fancyhdr}
-\fancypagestyle{fancy}{%
-\fancyhf{}
+
+% Define a page style for the first page
+\fancypagestyle{firstpage}{%
+\fancyhf{} % Clear all fields
 \lhead{\phone \\ % PHONE    
-        \city \\ % city
-	    \href{mailto:\email}{\email}} % EMAIL}
-	\chead{%
-	    \centering {\Huge \skills \name \vspace{.25em}} \\ % feel free to adjust vspace to 0 
-	    %{\color{highlight} \Large{\role}}
-		{\href{https://www.linkedin.com/in/\LinkedIn}{linkedin.com/in/\LinkedIn}} | {\href{https://github.com/\github}{github.com/\github}} 
-		}%
-
-
-	    \rhead{%Portfolio: \href{https://mathtodata.com}{ MathtoData.com} % Portfolio
-	     % Github
-	    } % LinkedIn
-	
-\renewcommand{\headrulewidth}{0pt}% the line before sections 2pt header rule
-\renewcommand{\headrule}{\hbox to\headwidth{%
-  \color{highlight}\leaders\hrule height \headrulewidth\hfill}}
-}
-\pagestyle{fancy}
-
-\setlength{\headheight}{90pt}
+        \city \\ % CITY
+	    \href{mailto:\email}{\email}} % EMAIL
+\chead{%
+	    \centering {\Huge \skills \name \vspace{.25em}} \\ % Adjust vspace
+	    {\href{https://www.linkedin.com/in/\LinkedIn}{linkedin.com/in/\LinkedIn}} | {\href{https://github.com/\github}{github.com/\github}}
+	}
+\rhead{} % Optionally add content to the right
+\renewcommand{\headrulewidth}{0pt} % Remove the line below the header
+\setlength{\headheight}{90pt} % Adjust as needed
 \setlength{\headsep}{5pt}
+}
+
+% Define an empty page style for other pages
+\fancypagestyle{otherpages}{%
+\fancyhf{} % Clear all header and footer fields
+\renewcommand{\headrulewidth}{0pt} % No line in the header
+\setlength{\headheight}{30pt} % Adjust as needed
+\setlength{\headsep}{5pt}
+}
+
